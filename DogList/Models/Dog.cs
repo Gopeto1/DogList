@@ -1,9 +1,14 @@
-﻿namespace DogList.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace DogList.Models
 {
+    [Table("Dog")]
     public class Dog
     {
-        int id { get; set; }
-        string name { get; set; }
-        int age { get; set; } 
+        [Key]
+        public int id { get; set; }
+        public string name { get; set; }
+        public int age { get; set; } 
     }
 }
